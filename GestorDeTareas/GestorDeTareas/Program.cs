@@ -18,11 +18,11 @@ public class Program
         }
 
         
-        tarea1.EditarTarea("Comprar alimentos y bebidas", DateTime.Now.AddDays(4));
+        tarea1.EditarTarea("Comprar comida", DateTime.Now.AddDays(4));
         tarea1.CambiarEstado(EstadoTarea.EnProgreso);
 
         
-        Console.WriteLine("Tareas después de las modificaciones:");
+        Console.WriteLine("Tareas después:");
         foreach (var tarea in listaTareas)
         {
             Console.WriteLine(tarea);

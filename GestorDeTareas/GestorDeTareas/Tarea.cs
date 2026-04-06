@@ -32,7 +32,7 @@ namespace GestorDeTareas
         {
 
             Titulo = nuevoTitulo;
-            if (nuevaFechaVencimiento <= FechaCreacion) {
+            if (nuevaFechaVencimiento < FechaCreacion) {
                 throw new ArgumentException("Fecha fuera de rango");
             }
 
