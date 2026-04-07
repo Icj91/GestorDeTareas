@@ -7,7 +7,7 @@ public class Program
         List<Tarea> listaTareas = new List<Tarea>();
         //tarea con plazo
         TareaConPlazo tareaConPlazo = new TareaConPlazo("Deberes de mates", DateTime.Now.AddDays(5));
-        tareaConPlazo.CambiarPlazoVencimiento(DateTime.Now.AddDays(41));
+
         listaTareas.Add(tareaConPlazo);
         //tarea localizada
         TareaLocalizada tareaLocalizada = new TareaLocalizada("Tarea en el extranjero","Noruega");
@@ -18,9 +18,10 @@ public class Program
         tareaConSubTarea.AñadirSubTarea("subtarea 1");
         tareaConSubTarea.AñadirSubTarea("subtarea 2");
         tareaConSubTarea.AñadirSubTarea("subtarea 3");
-        tareaConSubTarea.AñadirSubTarea("subtarea 1");
+   
         listaTareas.Add(tareaConSubTarea);
         
+
 
 
         //motor
