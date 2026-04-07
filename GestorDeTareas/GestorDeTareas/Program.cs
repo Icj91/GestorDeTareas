@@ -7,7 +7,7 @@ public class Program
         List<Tarea> listaTareas = new List<Tarea>();
         //tarea con plazo
         TareaConPlazo tareaConPlazo = new TareaConPlazo("Deberes de mates", DateTime.Now.AddDays(5));
-
+        tareaConPlazo.PresentarTarea(DateTime.Now.AddDays(4));
         listaTareas.Add(tareaConPlazo);
         //tarea localizada
         TareaLocalizada tareaLocalizada = new TareaLocalizada("Tarea en el extranjero","Noruega");
