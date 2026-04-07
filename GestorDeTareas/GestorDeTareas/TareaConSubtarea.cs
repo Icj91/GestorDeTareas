@@ -13,7 +13,12 @@ namespace GestorDeTareas
         }
 
         public void AñadirSubTarea(string subTarea) {
-            
+            //validar no hay tareas repetidas
+            foreach (var tarea in ListaSubTareas) {
+                if (tarea == subTarea) {
+                    throw new ArgumentException($"la tarea: '{tarea}' está repetida");
+                }
+            }
             ListaSubTareas.Add(subTarea);
         }
 

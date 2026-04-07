@@ -18,6 +18,7 @@ public class Program
         tareaConSubTarea.AñadirSubTarea("subtarea 1");
         tareaConSubTarea.AñadirSubTarea("subtarea 2");
         tareaConSubTarea.AñadirSubTarea("subtarea 3");
+        tareaConSubTarea.AñadirSubTarea("subtarea 1");
         listaTareas.Add(tareaConSubTarea);
         
 
