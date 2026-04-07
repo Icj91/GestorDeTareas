@@ -5,28 +5,15 @@ public class Program
     public static void Main(string[] args)
     {
         List<Tarea> listaTareas = new List<Tarea>();
-        Tarea tarea1 = new Tarea("Comprar alimentos", DateTime.Now.AddDays(3));
+        TareaConPlazo tareaConPlazo = new TareaConPlazo("Deberes de mates", DateTime.Now.AddDays(5));
+        listaTareas.Add(tareaConPlazo);
+        TareaLocalizada tareaLocalizada = new TareaLocalizada("Tarea en extranjero","Noruega");
+        listaTareas.Add(tareaLocalizada);
+        foreach (var tarea in listaTareas) {
 
-
-        listaTareas.Add(tarea1);
-  
-        
-        Console.WriteLine("Tareas:");
-        foreach (var tarea in listaTareas)
-        {
-            Console.WriteLine(tarea);
+            tarea.ObtenerDatos();
         }
-
         
-        tarea1.EditarTarea("Comprar comida", DateTime.Now.AddDays(4));
-        tarea1.CambiarEstado(EstadoTarea.EnProgreso);
-
-        
-        Console.WriteLine("Tareas después:");
-        foreach (var tarea in listaTareas)
-        {
-            Console.WriteLine(tarea);
-        }
     }
 
 
