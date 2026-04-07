@@ -6,7 +6,7 @@ namespace GestorDeTareas
 {
     public class TareaConPlazo:Tarea
     {
-        public DateTime FechaVencimiento { get; set; }
+        private DateTime FechaVencimiento { get; set; }
 
         public TareaConPlazo(string titulo,DateTime fechaVencimiento):base(titulo)
         {
@@ -28,9 +28,12 @@ namespace GestorDeTareas
             FechaVencimiento = nuevaFechaVencimiento;
         }
 
+
         public override void ObtenerDatos()
         {
-            Console.WriteLine($"Tarea:{Titulo} con fecha creacion:{FechaCreacion} \nfecha de vencimiento: {FechaVencimiento}");
+            Console.WriteLine($"\nTarea:{Titulo} con fecha creacion:{FechaCreacion} \nfecha de vencimiento: {FechaVencimiento}");
         }
+
+
     }
 }

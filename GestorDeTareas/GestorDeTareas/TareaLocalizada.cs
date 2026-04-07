@@ -29,7 +29,7 @@ namespace GestorDeTareas
 
         public override void ObtenerDatos()
         {
-            Console.WriteLine($"Tarea:{Titulo} con fecha creacion:{FechaCreacion} \nLugar: {Lugar}");
+            Console.WriteLine($"\nTarea:{Titulo} con fecha creacion:{FechaCreacion} \nLugar: {Lugar}");
         }
     }
 }

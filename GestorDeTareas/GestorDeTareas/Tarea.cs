@@ -6,9 +6,9 @@ namespace GestorDeTareas
 {
     public abstract class Tarea
     {
-        public int TareaId { get; set; }
+        public int TareaId { get;  }
         public string Titulo { get; set; }
-        public DateTime FechaCreacion { get; set; }
+        public DateTime FechaCreacion { get; }
         
         public EstadoTarea Estado { get; set; }
 
