@@ -11,7 +11,9 @@ public class Program
         listaTareas.Add(tareaConPlazo);
         //tarea localizada
         TareaLocalizada tareaLocalizada = new TareaLocalizada("Tarea en el extranjero","Noruega");
+        tareaLocalizada.PresentarTarea(DateTime.Now.AddDays(-1));
         listaTareas.Add(tareaLocalizada);
+
 
         //tarea subtareas
         TareaConSubtarea tareaConSubTarea = new TareaConSubtarea("Subtareas");

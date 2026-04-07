@@ -26,6 +26,7 @@ namespace GestorDeTareas
 
         public void EditarTituloTarea(string nuevoTitulo) => Titulo = nuevoTitulo;
 
+        //pasa a completada una vez presentada
         public virtual void PresentarTarea(DateTime fechaPresentacion)
         {
             if (fechaPresentacion <= FechaCreacion) {
@@ -33,6 +34,7 @@ namespace GestorDeTareas
 
             } 
             FechaPresentacion = fechaPresentacion;
+            Estado = EstadoTarea.Completada;
 
         }
         public void CambiarEstado(EstadoTarea nuevoEstado)

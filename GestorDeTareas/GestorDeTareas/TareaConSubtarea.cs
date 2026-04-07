@@ -25,7 +25,7 @@ namespace GestorDeTareas
  
         public override void ObtenerDatos()
         {
-            Console.WriteLine($"\nTarea:{Titulo} con fecha creacion:{FechaCreacion} \nTiene estas subtareas: ");
+            Console.WriteLine($"\nTarea:{Titulo} con fecha creacion:{FechaCreacion} \nEstado: {Estado}\nTiene estas subtareas: ");
             foreach (var subT in ListaSubTareas)
             {
                 Console.WriteLine(subT);

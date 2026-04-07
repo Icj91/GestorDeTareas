@@ -8,7 +8,6 @@ namespace GestorDeTareas
     public enum EstadoTarea
     {
         Pendiente,
-        EnProgreso,
         Completada,
         Cancelada
     }

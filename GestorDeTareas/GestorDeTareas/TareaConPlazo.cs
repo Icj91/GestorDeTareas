@@ -51,7 +51,7 @@ namespace GestorDeTareas
         {
             if (Estado==EstadoTarea.Completada || Estado==EstadoTarea.Cancelada) { 
                 Console.WriteLine($"\nTarea:{Titulo} con fecha creacion:{FechaCreacion} \nfecha de vencimiento: {FechaVencimiento}" +
-                    $"\nPresentada: {FechaPresentacion}\nEstado:{Estado}");
+                    $"\nPresentada: {FechaPresentacion}\nEstado: {Estado}");
             }
             else
             {
