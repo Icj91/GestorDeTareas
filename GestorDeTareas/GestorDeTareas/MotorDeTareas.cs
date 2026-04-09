@@ -10,6 +10,7 @@ namespace GestorDeTareas
 
         List<Tarea> listaTareas = new List<Tarea>();
         List<TareaLocalizada> listaTareasLocalizada = new List<TareaLocalizada>();
+
         public void EjecutarTareas()
         {
 
@@ -30,12 +31,12 @@ namespace GestorDeTareas
             listaTareasLocalizada.Add(tareaLocalizada3);
             listaTareasLocalizada.Add(tareaLocalizada4);
             AgregarTareasALaListaGeneral(listaTareasLocalizada);//aplicamos la restricciones  y generics para meter las listas de localizadas y subtareas a la lista general
-
+            BuscarPorPais("Francia");
             //tarea subtareas
             TareaConSubtarea tareaConSubTarea = new TareaConSubtarea("Subtareas");
-            tareaConSubTarea.AñadirSubTarea("subtarea 1");
-            tareaConSubTarea.AñadirSubTarea("subtarea 2");
-            tareaConSubTarea.AñadirSubTarea("subtarea 3");
+            //tareaConSubTarea.AñadirSubTarea("subtarea 1");
+            //tareaConSubTarea.AñadirSubTarea("subtarea 2");
+            //tareaConSubTarea.AñadirSubTarea("subtarea 3");
 
             listaTareas.Add(tareaConSubTarea);
 
@@ -56,6 +57,15 @@ namespace GestorDeTareas
                 listaTareas.Add(tarea);
             }
         
+        }
+
+        public void BuscarPorPais(string pais) {
+            
+            var listaLocalizados=listaTareasLocalizada.Where(p => p.Lugar.Equals(pais));
+            foreach (var tarea in listaLocalizados) {
+                Console.WriteLine($"{tarea.Titulo} pais: {tarea.Lugar}");
+            }
+            
         }
 
         public void MostrarTodaInformacion(List<Tarea> listaTarea)
