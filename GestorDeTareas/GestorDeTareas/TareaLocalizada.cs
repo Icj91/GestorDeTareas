@@ -27,6 +27,8 @@ namespace GestorDeTareas
             Lugar = lugar;
         }
 
+
+
         public override void ObtenerDatos()
         {
             Console.WriteLine($"\nTarea:{Titulo} con fecha creacion:{FechaCreacion} \nEstado: {Estado}\nLugar: {Lugar}");

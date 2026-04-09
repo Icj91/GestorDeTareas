@@ -21,8 +21,9 @@ namespace GestorDeTareas
             Titulo = titulo;
             Estado = EstadoTarea.Pendiente;
 
-
         }
+
+
 
         public void EditarTituloTarea(string nuevoTitulo) => Titulo = nuevoTitulo;
 
@@ -37,10 +38,7 @@ namespace GestorDeTareas
             Estado = EstadoTarea.Completada;
 
         }
-        public void CambiarEstado(EstadoTarea nuevoEstado)
-        {
-            Estado = nuevoEstado;
-        }
+        
         public abstract void ObtenerDatos();
 
     }
