@@ -7,6 +7,8 @@ namespace GestorDeTareas
     public class TareaConSubtarea : Tarea
     {
         public List<string> ListaSubTareas { get; set; }
+       
+
         public TareaConSubtarea(string titulo) : base(titulo)
         {
             ListaSubTareas = new();
@@ -14,8 +16,10 @@ namespace GestorDeTareas
 
         public void AñadirSubTarea(string subTarea) {
             //validar no hay tareas repetidas
-            foreach (var tarea in ListaSubTareas) {
-                if (tarea == subTarea) {
+            foreach (var tarea in ListaSubTareas)
+            {
+                if (tarea == subTarea)
+                {
                     throw new ArgumentException($"la tarea: '{tarea}' está repetida");
                 }
             }

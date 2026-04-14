@@ -23,7 +23,7 @@ namespace GestorDeTareas
 
         }
 
-
+        
 
         public void EditarTituloTarea(string nuevoTitulo) => Titulo = nuevoTitulo;
 
