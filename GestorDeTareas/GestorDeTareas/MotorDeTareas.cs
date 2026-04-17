@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
 
+
 namespace GestorDeTareas
 {
     public class MotorDeTareas 
@@ -41,10 +42,10 @@ namespace GestorDeTareas
 
 
             //tarea subtareas
-            //TareaConSubtarea tareaConSubTarea = new TareaConSubtarea("Subtareas1");
-            //tareaConSubTarea.AñadirSubTarea("subtarea 1");
-            //tareaConSubTarea.AñadirSubTarea("subtarea 2");
-            //tareaConSubTarea.AñadirSubTarea("subtarea 3");
+            TareaConSubtarea tareaConSubTarea = new TareaConSubtarea("Subtareas1");
+            tareaConSubTarea.AñadirSubTarea("subtarea 1");
+            tareaConSubTarea.AñadirSubTarea("subtarea 2");
+            tareaConSubTarea.AñadirSubTarea("subtarea 3");
 
             //TareaConSubtarea tareaConSubTarea2 = new TareaConSubtarea("Subtareas2");
             //tareaConSubTarea2.AñadirSubTarea("subtarea 4");
@@ -56,14 +57,14 @@ namespace GestorDeTareas
             //tareaConSubTarea3.AñadirSubTarea("subtarea 4");
             //tareaConSubTarea3.AñadirSubTarea("subtarea 3");
 
-            //AgregarTarea(tareaConSubTarea);
+            AgregarTarea(tareaConSubTarea);
             //AgregarTarea(tareaConSubTarea2);
             //AgregarTarea(tareaConSubTarea3);
             //BuscarPorSubTarea("subtarea 1");
 
-            listaDto=VolcarADto(listaTareas);
+            listaDto = VolcarADto(listaTareas);
 
-            MostrarTodaInformacionPorLista
+            //MostrarTodaInformacionPorLista
             //Agregamos las listas a la lista general de tareas
             //aplicamos la restricciones  y generics para meter las listas de localizadas y subtareas a la lista general
 
@@ -206,6 +207,8 @@ namespace GestorDeTareas
 
             return listaDto;
         }
+
+
 
     
     }
