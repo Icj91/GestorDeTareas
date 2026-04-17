@@ -142,8 +142,10 @@ namespace GestorDeTareas
             //{
             //    Console.WriteLine("NO hay registros de esa subatarea");
             //}
-
+        
         }
+
+
 
         public void MostrarTodaInformacionPorLista<T>(List<T> listaTarea) where T : Tarea
         {
@@ -164,5 +166,7 @@ namespace GestorDeTareas
 
             }
         }
+
+
     }
 }

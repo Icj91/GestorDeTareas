@@ -36,20 +36,14 @@ namespace GestorTareas.Test
 
 
         [Test]
-        public void CrearTareaLocalizada_SiEsEspaña_LanzaArgumentException()
+        public void CrearTareaLocalizada_SiEsEspaña_LanzaException()
         {
-            
             // Como el error lo lanza el "new", el Assert.Throws debe envolver al constructor, ya que si creo el objeto antes no me deja
             var ex = Assert.Throws<ArgumentException>(() => new TareaLocalizada("Título", "España"));
 
             //Verifico que el mensaje sea el del error
             Assert.That(ex.Message, Is.EqualTo("España no esta permitido"));
         }
-
-
-
-
-
 
     }
 }

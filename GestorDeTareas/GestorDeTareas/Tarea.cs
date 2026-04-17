@@ -12,7 +12,7 @@ namespace GestorDeTareas
         public EstadoTarea Estado { get; set; }
         public DateTime FechaPresentacion { get; set; }
 
-        public Tarea(string? titulo)
+        public Tarea(string titulo)
         {
             FechaCreacion = DateTime.Now;
 
