@@ -6,7 +6,7 @@ namespace GestorDeTareas
 {
     public class TareaConPlazo:Tarea
     {
-        private DateTime FechaVencimiento { get; set; }
+        public DateTime FechaVencimiento { get; set; }
 
         public TareaConPlazo(string titulo,DateTime fechaVencimiento):base(titulo)
         {

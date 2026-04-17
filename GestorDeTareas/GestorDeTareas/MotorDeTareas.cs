@@ -24,13 +24,13 @@ namespace GestorDeTareas
 
 
             ////tarea localizada
-            //TareaLocalizada tareaLocalizada1 = new TareaLocalizada("Tarea en el extranjero1", "Noruega");
+            TareaLocalizada tareaLocalizada1 = new TareaLocalizada("Tarea en el extranjero1", "Noruega");
             //TareaLocalizada tareaLocalizada2 = new TareaLocalizada("Tarea en el extranjero2", "Francia");
             //TareaLocalizada tareaLocalizada3 = new TareaLocalizada("Tarea en el extranjero3", "Francia");
             //TareaLocalizada tareaLocalizada4 = new TareaLocalizada("Tarea en el extranjero4", "Noruega");
             //tareaLocalizada1.PresentarTarea(DateTime.Now.AddDays(6));
 
-            //AgregarTarea(tareaLocalizada1);
+            AgregarTarea(tareaLocalizada1);
             //listaTareas.Add(tareaLocalizada2);
             //listaTareas.Add(tareaLocalizada3);
             //listaTareas.Add(tareaLocalizada4);
@@ -57,9 +57,12 @@ namespace GestorDeTareas
             AgregarTarea(tareaConSubTarea);
             AgregarTarea(tareaConSubTarea2);
             AgregarTarea(tareaConSubTarea3);
-            BuscarPorSubTarea("subtarea 1");
+            //BuscarPorSubTarea("subtarea 1");
+
+            var listaDto=VolcarADto(listaTareas);
 
 
+            MostrarTodaInformacionPorLista(listaDto);
 
             //Agregamos las listas a la lista general de tareas
             //aplicamos la restricciones  y generics para meter las listas de localizadas y subtareas a la lista general
@@ -67,7 +70,6 @@ namespace GestorDeTareas
 
 
 
-            //MostrarTodaInformacion(listaTareas);
             //BuscarPorPais("Noruega");//Metodo buscar por pais
 
         }
@@ -156,19 +158,53 @@ namespace GestorDeTareas
 
             }
         }
-
-        public void MostrarTodaInformacion() 
+        // Versión para DTOs la sobrecargamos
+        public void MostrarTodaInformacionPorLista(List<TareaDto> listaDto)
         {
-
-            foreach (var tarea in listaTareas)
+            foreach (var dto in listaDto)
             {
-                tarea.ObtenerDatos();
-
+                Console.WriteLine($"[DTO] ID: {dto.TareaId} | Título: {dto.Titulo} | Estado: {dto.Estado}");
             }
         }
 
-        
+        public List<TareaDto> VolcarADto(List<Tarea> listaOriginal)
+        {
+            var listaDto = new List<TareaDto>();
+
+            foreach (var tarea in listaOriginal)
+            {
+                var dto = new TareaDto
+                {
+                    TareaId = tarea.TareaId,
+                    Titulo = tarea.Titulo,
+                    FechaCreacion = tarea.FechaCreacion,
+                    Estado = tarea.Estado,
+                    FechaPresentacion = tarea.FechaPresentacion
+                };
+
+                // Guardamos datos específicos según el tipo
+                if (tarea is TareaLocalizada tareaLocalizada)
+                {
+                    
+                    dto.Lugar = tareaLocalizada.Lugar;
+                }
+                else if (tarea is TareaConSubtarea tareaConSubtarea)
+                {
+                    
+                    dto.ListaSubTareas = tareaConSubtarea.ListaSubTareas;
+                }
+                else if(tarea is TareaConPlazo tareaConPlazo)
+                {
+                    dto.FechaVencimiento = tareaConPlazo.FechaVencimiento;
+                }
+
+                listaDto.Add(dto);
+            }
 
 
+            return listaDto;
+        }
+
+    
     }
 }

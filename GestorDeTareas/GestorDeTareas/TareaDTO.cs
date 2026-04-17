@@ -21,6 +21,7 @@ namespace GestorDeTareas
         public List<string> ListaSubTareas { get; set; }
 
         //propiedad de tarea con plazo
-        private DateTime FechaVencimiento { get; set; }
+        public DateTime FechaVencimiento { get; set; }
+        
     }
 }
