@@ -6,6 +6,7 @@ public class Program
     public static void Main(string[] args)
     {
         CargarDatos();
+
         static List<TareaDto> CargarDatos()
         {
             const string ruta = "tareas.json";
@@ -16,6 +17,7 @@ public class Program
             }
             string json = File.ReadAllText(ruta);
             return JsonSerializer.Deserialize<List<TareaDto>>(json) ?? new List<TareaDto>();
+
         }
         // Al cerrar el programa — guardar siempre
         static void GuardarDatos(List<TareaDto> datos)
@@ -28,8 +30,11 @@ public class Program
 
         //motor
         MotorDeTareas motorTareas = new MotorDeTareas();
+        
         motorTareas.EjecutarTareas();
 
+
+        GuardarDatos(motorTareas.listaDto);
 
     }
 

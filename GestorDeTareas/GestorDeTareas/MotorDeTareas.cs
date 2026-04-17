@@ -8,9 +8,11 @@ namespace GestorDeTareas
     public class MotorDeTareas 
     {
         public List<Tarea> listaTareas { get; set; }
+        public List<TareaDto> listaDto { get; set; }
         public MotorDeTareas()
         {
            listaTareas = new List<Tarea>();
+           listaDto = new List<TareaDto>();
         }
         
         public void EjecutarTareas()
@@ -24,13 +26,13 @@ namespace GestorDeTareas
 
 
             ////tarea localizada
-            TareaLocalizada tareaLocalizada1 = new TareaLocalizada("Tarea en el extranjero1", "Noruega");
+            //TareaLocalizada tareaLocalizada1 = new TareaLocalizada("Tarea en el extranjero1", "Noruega");
             //TareaLocalizada tareaLocalizada2 = new TareaLocalizada("Tarea en el extranjero2", "Francia");
             //TareaLocalizada tareaLocalizada3 = new TareaLocalizada("Tarea en el extranjero3", "Francia");
             //TareaLocalizada tareaLocalizada4 = new TareaLocalizada("Tarea en el extranjero4", "Noruega");
             //tareaLocalizada1.PresentarTarea(DateTime.Now.AddDays(6));
 
-            AgregarTarea(tareaLocalizada1);
+            //AgregarTarea(tareaLocalizada1);
             //listaTareas.Add(tareaLocalizada2);
             //listaTareas.Add(tareaLocalizada3);
             //listaTareas.Add(tareaLocalizada4);
@@ -39,31 +41,29 @@ namespace GestorDeTareas
 
 
             //tarea subtareas
-            TareaConSubtarea tareaConSubTarea = new TareaConSubtarea("Subtareas1");
-            tareaConSubTarea.AñadirSubTarea("subtarea 1");
-            tareaConSubTarea.AñadirSubTarea("subtarea 2");
-            tareaConSubTarea.AñadirSubTarea("subtarea 3");
+            //TareaConSubtarea tareaConSubTarea = new TareaConSubtarea("Subtareas1");
+            //tareaConSubTarea.AñadirSubTarea("subtarea 1");
+            //tareaConSubTarea.AñadirSubTarea("subtarea 2");
+            //tareaConSubTarea.AñadirSubTarea("subtarea 3");
 
-            TareaConSubtarea tareaConSubTarea2 = new TareaConSubtarea("Subtareas2");
-            tareaConSubTarea2.AñadirSubTarea("subtarea 4");
-            tareaConSubTarea2.AñadirSubTarea("subtarea 1");
-            tareaConSubTarea2.AñadirSubTarea("subtarea 3");
+            //TareaConSubtarea tareaConSubTarea2 = new TareaConSubtarea("Subtareas2");
+            //tareaConSubTarea2.AñadirSubTarea("subtarea 4");
+            //tareaConSubTarea2.AñadirSubTarea("subtarea 1");
+            //tareaConSubTarea2.AñadirSubTarea("subtarea 3");
 
-            TareaConSubtarea tareaConSubTarea3 = new TareaConSubtarea("Subtareas3");
-            tareaConSubTarea3.AñadirSubTarea("subtarea 5");
-            tareaConSubTarea3.AñadirSubTarea("subtarea 4");
-            tareaConSubTarea3.AñadirSubTarea("subtarea 3");
+            //TareaConSubtarea tareaConSubTarea3 = new TareaConSubtarea("Subtareas3");
+            //tareaConSubTarea3.AñadirSubTarea("subtarea 5");
+            //tareaConSubTarea3.AñadirSubTarea("subtarea 4");
+            //tareaConSubTarea3.AñadirSubTarea("subtarea 3");
 
-            AgregarTarea(tareaConSubTarea);
-            AgregarTarea(tareaConSubTarea2);
-            AgregarTarea(tareaConSubTarea3);
+            //AgregarTarea(tareaConSubTarea);
+            //AgregarTarea(tareaConSubTarea2);
+            //AgregarTarea(tareaConSubTarea3);
             //BuscarPorSubTarea("subtarea 1");
 
-            var listaDto=VolcarADto(listaTareas);
+            listaDto=VolcarADto(listaTareas);
 
-
-            MostrarTodaInformacionPorLista(listaDto);
-
+            MostrarTodaInformacionPorLista
             //Agregamos las listas a la lista general de tareas
             //aplicamos la restricciones  y generics para meter las listas de localizadas y subtareas a la lista general
 
@@ -158,6 +158,8 @@ namespace GestorDeTareas
 
             }
         }
+
+
         // Versión para DTOs la sobrecargamos
         public void MostrarTodaInformacionPorLista(List<TareaDto> listaDto)
         {
