@@ -9,6 +9,7 @@ namespace GestorDeTareas.Application.DTOs
     {
         
         public int TareaId { get; set; }
+        public int UsuarioId { get; set; }
         public string? Titulo { get; set; }
         public DateTime FechaCreacion { get; set; }
         public EstadoTarea Estado { get; set; }

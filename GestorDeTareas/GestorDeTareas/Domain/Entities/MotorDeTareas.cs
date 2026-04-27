@@ -68,10 +68,6 @@ namespace GestorDeTareas.Domain.Entities
             //MostrarTodaInformacionPorLista
             //Agregamos las listas a la lista general de tareas
             //aplicamos la restricciones  y generics para meter las listas de localizadas y subtareas a la lista general
-
-
-
-
             //BuscarPorPais("Noruega");//Metodo buscar por pais
 
         }
@@ -163,15 +159,14 @@ namespace GestorDeTareas.Domain.Entities
                     FechaPresentacion = tarea.FechaPresentacion
                 };
 
+
                 // Guardamos datos específicos según el tipo
                 if (tarea is TareaLocalizada tareaLocalizada)
                 {
-                    
                     dto.Lugar = tareaLocalizada.Lugar;
                 }
                 else if (tarea is TareaConSubtarea tareaConSubtarea)
                 {
-                    
                     dto.ListaSubTareas = tareaConSubtarea.ListaSubTareas;
                 }
                 else if(tarea is TareaConPlazo tareaConPlazo)

@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GestorDeTareas.Domain.Entities
+namespace GestorDeTareas.Application.DTOs
 {
-    public class Usuario
+    public class CrearUsuarioDTO
     {
-
-        public int Id { get; }
         public string Nombre { get; set; }
         public string Email { get; set; }
         public bool EsAdmin { get; set; }
-
     }
 }
