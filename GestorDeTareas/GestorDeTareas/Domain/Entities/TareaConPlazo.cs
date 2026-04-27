@@ -1,8 +1,9 @@
-﻿using System;
+﻿using GestorDeTareas.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace GestorDeTareas
+namespace GestorDeTareas.Domain.Entities
 {
     public class TareaConPlazo:Tarea
     {

@@ -1,4 +1,4 @@
-﻿using GestorDeTareas;
+﻿using GestorDeTareas.Domain.Entities;
 using NUnit.Framework;
 using System.Numerics;
 

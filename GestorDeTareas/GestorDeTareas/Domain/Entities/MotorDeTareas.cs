@@ -1,10 +1,11 @@
-﻿using System;
+﻿using GestorDeTareas.Application.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
 
 
-namespace GestorDeTareas
+namespace GestorDeTareas.Domain.Entities
 {
     public class MotorDeTareas 
     {
@@ -43,9 +44,9 @@ namespace GestorDeTareas
 
             //tarea subtareas
             TareaConSubtarea tareaConSubTarea = new TareaConSubtarea("Subtareas1");
-            tareaConSubTarea.AñadirSubTarea("subtarea 1");
-            tareaConSubTarea.AñadirSubTarea("subtarea 2");
-            tareaConSubTarea.AñadirSubTarea("subtarea 3");
+            tareaConSubTarea.AnadirSubTarea("subtarea 1");
+            tareaConSubTarea.AnadirSubTarea("subtarea 2");
+            tareaConSubTarea.AnadirSubTarea("subtarea 3");
 
             //TareaConSubtarea tareaConSubTarea2 = new TareaConSubtarea("Subtareas2");
             //tareaConSubTarea2.AñadirSubTarea("subtarea 4");
@@ -122,29 +123,6 @@ namespace GestorDeTareas
             {
                 Console.WriteLine($"No hay registros con la subtarea: '{subTarea}'");
             }
-
-            //foreach (var subt in localizadas)
-            //{
-            //    foreach (var item in subt.ListaSubTareas)
-            //    {
-            //        if (item.Equals(subTarea))
-            //        {
-            //            listaEncontradas.Add(subt);
-            //            break;
-            //        }
-            //    }
-            //}
-
-            //if (listaEncontradas.Any())
-            //{
-            //    foreach (var t in listaEncontradas) {
-            //        Console.WriteLine(t.Titulo);
-            //    }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("NO hay registros de esa subatarea");
-            //}
         
         }
 
@@ -207,6 +185,7 @@ namespace GestorDeTareas
 
             return listaDto;
         }
+
 
 
 

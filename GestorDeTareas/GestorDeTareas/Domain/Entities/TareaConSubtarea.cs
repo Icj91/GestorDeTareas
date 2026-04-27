@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GestorDeTareas
+namespace GestorDeTareas.Domain.Entities
 {
     public class TareaConSubtarea : Tarea
     {
@@ -14,7 +14,7 @@ namespace GestorDeTareas
             ListaSubTareas = new();
         }
 
-        public void AñadirSubTarea(string subTarea) {
+        public void AnadirSubTarea(string subTarea) {
             //validar no hay tareas repetidas
             foreach (var tarea in ListaSubTareas)
             {

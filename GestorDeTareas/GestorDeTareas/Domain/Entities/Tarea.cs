@@ -1,8 +1,9 @@
-﻿using System;
+﻿using GestorDeTareas.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace GestorDeTareas
+namespace GestorDeTareas.Domain.Entities
 {
     public abstract class Tarea
     {
@@ -11,6 +12,7 @@ namespace GestorDeTareas
         public DateTime FechaCreacion { get; }
         public EstadoTarea Estado { get; set; }
         public DateTime FechaPresentacion { get; set; }
+        public int UsuarioId{ get; set; }
 
         public Tarea(string titulo)
         {

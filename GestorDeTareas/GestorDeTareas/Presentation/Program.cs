@@ -1,4 +1,5 @@
-﻿using GestorDeTareas;
+﻿using GestorDeTareas.Application.DTOs;
+using GestorDeTareas.Domain.Entities;
 using System.Text.Json;
 
 public class Program
@@ -27,12 +28,12 @@ public class Program
             new JsonSerializerOptions { WriteIndented = true }));
         }
 
-
+        
 
 
         //cargamos
         MotorDeTareas motorTareas = new MotorDeTareas();
-        
+        motorTareas.listaDto = CargarDatos();
         
 
         motorTareas.EjecutarTareas();
